@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Zound </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Bootstrap latest compiled and minified CSS, offline -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <!--JQuery, offline -->
+  <script src="jquery-3.2.1.min.js"></script>
+  
+  <!--Bootstrap latest Compiled and minified CSS, offline -->
+  <script src="js/bootstrap.min.js"></script>
+  
+  <link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
+
+</head>
+<body>
+
+	<div class="title col-12">
+		<h1>Zound</h1>
+		<h2 style="font-family:Agency FB;font-size:30px;">Online Store for Musical Instruments</h2>
+	</div>
+	
+	<div class="header col-12">
+	
+		<div  class="Home col-3">
+			<a href="Zound.html" class="a1">Home</a>
+		</div>
+		
+		<div class="My Account col-3">
+			<a href="My Account.html" class="a1">My Account</a>
+		</div>
+		
+		<div class="Customer col-3">
+			<a href="Customer Services.html" class="a1">Customer Services</a>
+		</div>
+		
+		<div class="Contact col-3">
+			<a href="Contact Us.html" class="a1">Contact Us</a>
+		</div>
+		
+	</div>
+	<div class="container">
+	
+	<div class="register" >
+	<h2>REGISTER ACCOUNT</h2>
+	<pre><p>if you already have an account with us please login at the  <a href="Login Page.html"><button type="button"  onclick="show_alert();" class="btn btn-info btn-lg">Login Page</button> </a></p></pre>
+	<h3>Your Personal Details</h3>
+	<div class="form-group">
+	<center><form>
+	<pre>                <label><span style="color:red">*</span>First Name</label>  <input name="fname" placeholder="First Name" size="75">
+		 <label><span style="color:red">*</span>Last Name</label>  <input name="lname" placeholder="Last Name" size="75">
+		 <label><span style="color:red">*</span>E-Mail</label>     <input name="mail" placeholder="E-Mail" size="75">
+		 <label><span style="color:red">*</span>Telephone</label>  <input name="telephone" placeholder="Telephone" size="75">
+		 <label><span style="color:red">*</span>Fax</label>        <input name="Fax" placeholder="Fax" size="75">
+		 </pre></center>
+	<h3>Your Address</h3>
+	<center><pre>                   <label><span style="color:red">*</span>Company</label>  <input name="Company" placeholder="Company" size="75">
+		 <label><span style="color:red">*</span>Address 1</label>  <input name="Address 1" placeholder="Address 1" size="75">
+		 <label><span style="color:red">*</span>Address 2</label>  <input name="Address 2" placeholder="Address 2" size="75">
+		 <label><span style="color:red">*</span>City</label>       <input name="City" placeholder="City" size="75">
+		 <label><span style="color:red">*</span>Post Code</label>  <input name="code" placeholder="Post Code" size="75">
+		 <label><span style="color:red">*</span>Country</label>    <select style="width:470px";><option value="Sri Lanka" size="75">Sri Lanka</option></select>
+
+	      <label><span style="color:red">*</span>Region/State</label>  <select style="width:470px";><option value="---Please Select---" size="75">---Please Select---</option></select>
+		 </pre></center>
+	<h3>Your Password</h3>
+		<center><pre>
+		<label><span style="color:red">*</span>Password</label>    <input name="password" placeholder="Password" size="75">
+	<label><span style="color:red">*</span>Password Confirm</label>    <input name="password confirm" placeholder="Password Confirm" size="75">
+		</pre></center>
+	<h3>Newsletter</h3>
+	<pre><center>
+	<label>Subscribe</label> <input type="radio" value="Yes"> <label>Yes</label> <input type="radio" value="No" checked> <label>No</label>
+	</pre></center>
+	</div>
+	</div>
+	
+	<div class="para">
+	<pre><p style="font-family:verdana";>I have read and agree to the <span style="color:red">Privacy Policy</span> <input type="checkbox" checked="checked" id="check2" onchange="cTrig('check2')"> <button id="demo" type="button" onmouseover="mOver()" onmouseout="mOut()" class="btn btn-info btn-lg">CONTINUE</button></p></pre>
+	</div>
+	
+	
+<div class="slideshow-container">
+
+<div class="mySlides none">
+  
+  <img src="martin.jpg" style="width:300px";"height:300px"; "margin-left:900px";>
+  
+</div>
+
+<div class="mySlides none">
+  
+  <img src="41etmv-OtZL._SL500_AC_SS350_.jpg" style="width:300px";"height:300px"; "margin-left:900px";>
+  
+</div>
+
+<div class="mySlides none">
+  
+  <img src="YAM-YFG811II.jpg" style="width:300px";"height:300px";"margin-left:900px";>
+  
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+ function show_alert(){
+	alert("If you don't have an account please create your account here!");
+	}
+	function cTrig(clickedid){
+		if (document.getElementById(clickedid).checked == true) {
+			return false;
+			
+			} else {
+			var box= confirm("Are you sure you want to do this?");
+			if (box==true)
+			return true;
+			else
+				document.getElementById(clickedid).checked = true;
+			}
+			}
+	function mOver(){
+				document.getElementById('demo').innerHTML = "Start";
+				}
+	function mOut(){
+				document.getElementById('demo').innerHTML = "Continue";
+				}
+	</script>
+	</div>
+	</form>
+	
+		 
+		 
+		 
+		 
+	
+	
+	<div class="contact col-12">
+		<address>No-212/5, Main Street, Badulla.</address>
+		<a href="#1">zound.store@gmail.com</a> </br>
+		<a href="#1">+944658352464</a> | <a href="#1">+946789765432</a>
+		<a href="#1"><img src="Images/cart.png" align="right" width="5%" height="10%"></a>
+		<a href="#1"><img src="Images/Yootheme-Social-Bookmark-Social-facebook-box-blue.ico" align="right" width="5%" height="10%"></a>
+		<a href="#1"><img src="Images/twitter.png" align="right" width="5%" height="10%"></a>
+	</div>
+	
+	<div class="copyright col-12">
+		<p>Zound&copy2k17 </p>
+	</div>
+</body>
+</html>
